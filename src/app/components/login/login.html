@@ -1,0 +1,20 @@
+<div class="container">
+    <form [formGroup]="formulario">
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email address</label>
+            <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+            [ngClass]="{'is-invalid': emailNotValid,'is-valid': emailValid}">
+            We'll never share your email with anyone else
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" formControlName="password" class="form-control" id="inputPassword">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+        @if (errorMessage() != ''){
+            <div class="alert alert-danger" role="alert">
+                {{errorMessage()}}
+            </div>
+        }
+    </form>
+</div>

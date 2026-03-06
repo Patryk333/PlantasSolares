@@ -1,0 +1,11 @@
+<div class="container my-5">
+  <h2 class="text-success mb-4 text-center">Nuestros Productos Solares</h2>
+  <div class="row gy-5 gx-4">
+    @for (planta of plantas(); track planta.id) {
+      <div class="col-md-4">
+        <app-plantas-item [planta]="planta" (favoriteToggled)="toggleFavorite(planta)">></app-plantas-item>
+      </div>
+    }
+  </div>
+  <!--{{plantes() | json}}-->
+</div>

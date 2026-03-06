@@ -1,0 +1,32 @@
+<div class="card h-100 shadow-sm border-0">
+    
+    <img 
+      [src]="planta().foto?.startsWith('data:') || planta().foto?.startsWith('http') ? planta().foto : '/' + planta().foto"
+      class="card-img-top"
+      alt="Panel solar">
+
+    <div class="card-body">
+      <h5 class="card-title text-success">
+        {{planta().nom}}
+      </h5>
+
+      <p class="card-text text-secondary">
+        Ubicación: {{planta().ubicacio.latitude + ", " + planta().ubicacio.longitude}}
+      </p>
+
+      <p class="fw-bold fs-5 text-dark">
+        Capacidad: ⚡{{planta().capacitat}}
+      </p>
+
+      <p class="fw-bold fs-5 text-dark">
+        <span (click)="toggleFavorite()">{{planta().favorite ? "♡" : "❤️"}}</span>
+      </p>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <a href="#planta/{{planta().id}}" class="btn btn-outline-success w-100">
+        Ver producto
+      </a>
+    </div>
+
+  </div>

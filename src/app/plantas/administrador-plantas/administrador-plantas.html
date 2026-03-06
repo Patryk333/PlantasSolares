@@ -1,0 +1,6 @@
+<app-plantas-table (action)="onAction($event)"></app-plantas-table>
+<app-administrador-plantas-formulario 
+  [planta]="currentPlanta()" 
+  (saved)="onFormSaved()"
+  (cancelled)="onFormCancelled()">
+</app-administrador-plantas-formulario>

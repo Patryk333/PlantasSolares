@@ -1,0 +1,8 @@
+<td>{{ planta().nom }}</td>
+<td>{{ planta().ubicacio.latitude }},{{ planta().ubicacio.longitude }}</td>
+<td>{{ planta().usuario }}</td>
+<td>{{ planta().capacitat }}</td>
+<td>
+  <button type="button" class="btn btn-primary btn-sm" (click)="editar()">Editar</button>
+  <button type="button" class="btn btn-danger btn-sm" (click)="eliminar()">Eliminar</button>
+</td>

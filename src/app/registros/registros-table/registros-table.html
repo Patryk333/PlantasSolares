@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id Planta</th>
+      <th scope="col">Generacio</th>
+      <th scope="col">Consum</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(registro of registros(); track registro.id){
+        <tr app-registros-row [registroId]="registro"></tr>
+    }
+  </tbody>
+</table>
